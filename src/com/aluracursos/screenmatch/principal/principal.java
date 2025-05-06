@@ -1,3 +1,5 @@
+package com.aluracursos.screenmatch.principal;
+
 import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
 import com.aluracursos.screenmatch.calculos.FiltroRecomendaciones;
 import com.aluracursos.screenmatch.modelos.Episodio;
@@ -5,7 +7,6 @@ import com.aluracursos.screenmatch.modelos.Series;
 import com.aluracursos.screenmatch.modelos.movies;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class principal {
 

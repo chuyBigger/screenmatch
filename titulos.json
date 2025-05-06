@@ -1,0 +1,26 @@
+[
+  {
+    "Title": "Matrix",
+    "Year": 1993,
+    "DuracionEnMinutos": 60,
+    "IncluidoEnElPlan": false,
+    "SumaDeLasEvaluaciones": 0.0,
+    "ToalDeLasEvaluaciones": 0
+  },
+  {
+    "Title": "Top Gun",
+    "Year": 1986,
+    "DuracionEnMinutos": 109,
+    "IncluidoEnElPlan": false,
+    "SumaDeLasEvaluaciones": 0.0,
+    "ToalDeLasEvaluaciones": 0
+  },
+  {
+    "Title": "Encantada",
+    "Year": 2008,
+    "DuracionEnMinutos": 13,
+    "IncluidoEnElPlan": false,
+    "SumaDeLasEvaluaciones": 0.0,
+    "ToalDeLasEvaluaciones": 0
+  }
+]

@@ -1,28 +1,29 @@
-public class movies {
-    String nombre;
-    int fechaDeLanzamineto;
-    int duracionEnMinutos;
-    boolean incluidoEnElPlan;
-    private double sumaDeLasEvaluaciones;
-    private int toalDeLasEvaluaciones;
+package com.aluracursos.screenmatch.modelos;
 
-    int getToalDeLasEvaluaciones(){
-        return toalDeLasEvaluaciones;
+import com.aluracursos.screenmatch.calculos.Clasificacion;
+
+public class movies extends Titulo implements Clasificacion {
+    private String director;
+
+    public movies(String nombre, int fechaDeLanzamineto) {
+        super(nombre, fechaDeLanzamineto);
     }
 
-    void muestraFichaTecnica(){
-        System.out.println("El Nombre de la pelicula es:" + nombre);
-        System.out.println("Su fecha de lanzamiento en el año: " + fechaDeLanzamineto);
-        System.out.println("Tiene una duracion de: " + duracionEnMinutos+" minutos");
+    public String getDirector() {
+        return director;
     }
 
-    void evalua(double nota){
-        sumaDeLasEvaluaciones += nota;
-        toalDeLasEvaluaciones++;
-
-    }
-    double calculaMedia(){
-        return sumaDeLasEvaluaciones / toalDeLasEvaluaciones;
+    public void setDirector(String director) {
+        this.director = director;
     }
 
+    @Override
+    public int getClasificacion() {
+        return (int) calculaMedia() / 2 ;
+    }
+
+    @Override
+    public String toString() {
+        return "Pelicula: "+this.getNombre() +"("+getFechaDeLanzamineto()+")";
+    }
 }
