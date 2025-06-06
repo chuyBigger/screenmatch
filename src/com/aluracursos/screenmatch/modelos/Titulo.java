@@ -9,7 +9,7 @@ public class Titulo implements Comparable<Titulo>{
     @SerializedName("Year")
     private int fechaDeLanzamineto;
 
-    public Titulo(TituloOmdb miTituloOmdb) {
+    public Titulo(TituloOmdb miTituloOmdb) {   // todo " Es mi exepcion
         this.nombre=miTituloOmdb.title();
         this.fechaDeLanzamineto= Integer.valueOf(miTituloOmdb.year());
         if (miTituloOmdb.Runtime().contains("N/A")){

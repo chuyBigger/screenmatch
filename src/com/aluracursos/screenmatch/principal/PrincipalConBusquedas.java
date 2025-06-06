@@ -24,6 +24,7 @@ public class PrincipalConBusquedas {
     public static void main(String[] args) throws IOException, InterruptedException {
         Scanner scanner = new Scanner(System.in);
         List<Titulo> titulos = new ArrayList<>();
+
         Gson gson = new GsonBuilder()
                 .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
                 .setPrettyPrinting()
@@ -43,14 +44,16 @@ public class PrincipalConBusquedas {
             try {
 
                 HttpClient client = HttpClient.newHttpClient();
-
-
                 HttpRequest request = HttpRequest.newBuilder()
                         .uri(URI.create(direccion))
                         .build();
+
                 HttpResponse<String> response = client
                         .send(request, HttpResponse.BodyHandlers.ofString());
                 String json = response.body();
+
+
+
 
                 TituloOmdb miTituloOmdb = gson.fromJson(json, TituloOmdb.class);
 
